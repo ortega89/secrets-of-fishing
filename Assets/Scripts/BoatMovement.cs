@@ -21,7 +21,7 @@ public class BoatMovement : MonoBehaviour
     {
         float dx = Input.GetAxis("Horizontal");
         float dy = Input.GetAxis("Vertical");
-        Debug.Log("dx = " + dx + ", dy = " + dy);
+        //Debug.Log("dx = " + dx + ", dy = " + dy);
         speed *= Mathf.Pow(inertia, Time.fixedDeltaTime);
         speed += Vector2.ClampMagnitude(new Vector2(dx, dy), acceleration * Time.fixedDeltaTime);
         speed = Vector2.ClampMagnitude(speed, maxSpeed);
